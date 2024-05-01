@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "Spaghetti Carbonara",
+      "price": 12.99,
+      "description": "Pasta with eggs, cheese, pancetta, and black pepper",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Tikka Masala",
+      "price": 14.49,
+      "description": "Grilled chicken in a creamy tomato sauce with Indian spices",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 3,
+      "name": "Sushi",
+      "price": 16.99,
+      "description": "Fish and rice rolls with various fillings like avocado, cucumber, or tuna",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 4,
+      "name": "Caesar Salad",
+      "price": 8.99,
+      "description": "Lettuce, croutons, parmesan cheese, and Caesar dressing",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 5,
+      "name": "Hamburger",
+      "price": 10.99,
+      "description": "Beef patty with lettuce, tomato, onion, and condiments in a bun",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 6,
+      "name": "Pad Thai",
+      "price": 11.99,
+      "description": "Stir-fried rice noodles with tofu, shrimp, peanuts, egg, and bean sprouts",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 7,
+      "name": "Margherita Pizza",
+      "price": 9.99,
+      "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil leaves",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 8,
+      "name": "Beef Burrito",
+      "price": 10.49,
+      "description": "Tortilla filled with seasoned beef, rice, beans, cheese, and salsa",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 9,
+      "name": "Pho",
+      "price": 11.99,
+      "description": "Vietnamese noodle soup with broth, rice noodles, herbs, and meat (usually beef or chicken)",
+      "img": "https://via.placeholder.com/800x600"
+    },
+    {
+      "id": 10,
+      "name": "Tiramisu",
+      "price": 7.99,
+      "description": "Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese",
+      "img": "https://via.placeholder.com/800x600"
+    }
+  ]
+  

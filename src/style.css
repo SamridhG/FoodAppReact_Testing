@@ -65,3 +65,88 @@ body{
     text-decoration: underline;
     color: cyan;
 }
+.menu-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+.title-img{
+    background-image: url('../texture/chef-logo.png');
+    background-size: cover;
+    background-position: center; 
+     box-sizing: border-box;
+     height: 250px;
+     width: 250px;
+
+}
+.menu{
+    font-size: 3rem;
+    color: white;
+    font-family: cursive;
+    height: 250px;
+     width: 250px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.card-container-parent{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 1200px;
+    margin: 10px;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    height: 1200px
+}
+.card-parent{
+    width: 260px;
+    height:385px;
+    background-color:  #FFA500;
+    border-radius: 10%;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+.card-parent:hover{
+    background-color:  #FFFFFF;
+}
+.card-img{
+    height: 180px;
+    width: 260px;
+}
+.card-img>img{
+    border-radius: 10%;
+ height: 100%;
+ width: 100%;
+    background-size: cover;
+    background-position: center; 
+     box-sizing: border-box;
+}
+.name-and-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-family: cursive;
+    font-size: 1.8rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+.card-discription{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: cursive;
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+.card-parent:hover>.name-and-price,.card-parent:hover>.card-discription{
+    color:  #FFA500;
+}
