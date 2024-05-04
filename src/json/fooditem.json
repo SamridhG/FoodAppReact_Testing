@@ -1,73 +1,381 @@
 [
+  {
+    "id": 1,
+    "name": "Spaghetti Carbonara",
+    "price": 12.99,
+    "description": "Pasta with eggs, cheese, pancetta, and black pepper",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 2,
+    "name": "Chicken Tikka Masala",
+    "price": 14.49,
+    "description": "Grilled chicken in a creamy tomato sauce with Indian spices",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 3,
+    "name": "Sushi",
+    "price": 16.99,
+    "description": "Fish and rice rolls with various fillings like avocado, cucumber, or tuna",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 4,
+    "name": "Caesar Salad",
+    "price": 8.99,
+    "description": "Lettuce, croutons, parmesan cheese, and Caesar dressing",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 5,
+    "name": "Hamburger",
+    "price": 10.99,
+    "description": "Beef patty with lettuce, tomato, onion, and condiments in a bun",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 6,
+    "name": "Pad Thai",
+    "price": 11.99,
+    "description": "Stir-fried rice noodles with tofu, shrimp, peanuts, egg, and bean sprouts",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 7,
+    "name": "Margherita Pizza",
+    "price": 9.99,
+    "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil leaves",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 8,
+    "name": "Beef Burrito",
+    "price": 10.49,
+    "description": "Tortilla filled with seasoned beef, rice, beans, cheese, and salsa",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 9,
+    "name": "Pho",
+    "price": 11.99,
+    "description": "Vietnamese noodle soup with broth, rice noodles, herbs, and meat (usually beef or chicken)",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 10,
+    "name": "Tiramisu",
+    "price": 7.99,
+    "description": "Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 11,
+    "name": "Lasagna",
+    "price": 13.99,
+    "description": "Layered pasta dish with tomato sauce, meat, and cheese",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 12,
+    "name": "Fish and Chips",
+    "price": 9.49,
+    "description": "Deep-fried fish with potato chips (French fries)",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 13,
+    "name": "Caesar Salad",
+    "price": 8.99,
+    "description": "Lettuce, croutons, parmesan cheese, and Caesar dressing",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 14,
+    "name": "Beef Stroganoff",
+    "price": 15.99,
+    "description": "Sautéed beef in a sour cream sauce served over noodles",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 15,
+    "name": "Mushroom Risotto",
+    "price": 12.49,
+    "description": "Creamy rice dish with mushrooms, onions, and cheese",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 16,
+    "name": "Chicken Alfredo",
+    "price": 14.99,
+    "description": "Pasta with chicken in a creamy Alfredo sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 17,
+    "name": "Beef Tacos",
+    "price": 9.99,
+    "description": "Tortillas filled with seasoned beef, lettuce, cheese, and salsa",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 18,
+    "name": "Margarita Cocktail",
+    "price": 7.49,
+    "description": "Classic cocktail made with tequila, lime juice, and triple sec",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 19,
+    "name": "Cheeseburger",
+    "price": 11.49,
+    "description": "Hamburger topped with cheese, lettuce, tomato, and pickles",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 20,
+    "name": "Fettuccine Alfredo",
+    "price": 12.99,
+    "description": "Pasta with creamy Alfredo sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 21,
+    "name": "Chicken Caesar Salad",
+    "price": 10.99,
+    "description": "Caesar salad topped with grilled chicken breast",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 22,
+    "name": "Chocolate Brownie",
+    "price": 6.99,
+    "description": "Rich and fudgy chocolate dessert",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 23,
+    "name": "Chicken Noodle Soup",
+    "price": 8.49,
+    "description": "Soup made with chicken, noodles, vegetables, and broth",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 24,
+    "name": "Margarita Pizza",
+    "price": 9.99,
+    "description": "Pizza with tomato sauce, mozzarella cheese, and fresh basil",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 25,
+    "name": "Beef Stir Fry",
+    "price": 13.49,
+    "description": "Beef and vegetables stir-fried in a savory sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 26,
+    "name": "Apple Pie",
+    "price": 7.99,
+    "description": "Classic American pie with apples and cinnamon",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 27,
+    "name": "Fish Taco",
+    "price": 10.49,
+    "description": "Tacos filled with grilled fish, cabbage, salsa, and lime crema",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 28,
+    "name": "Pasta Primavera",
+    "price": 11.99,
+    "description": "Pasta with mixed vegetables in a light cream sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 29,
+    "name": "Blueberry Pancakes",
+    "price": 8.99,
+    "description": "Pancakes topped with fresh blueberries and maple syrup",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 30,
+    "name": "Avocado Toast",
+    "price": 9.49,
+    "description": "Toast topped with mashed avocado, salt, pepper, and optional toppings",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 31,
+    "name": "Shrimp Scampi",
+    "price": 15.99,
+    "description": "Shrimp sautéed in garlic, butter, lemon juice, and white wine",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 32,
+    "name": "Mojito",
+    "price": 8.49,
+    "description": "Cocktail made with rum, lime juice, sugar, mint leaves, and soda water",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 33,
+    "name": "Cheese Pizza",
+    "price": 9.49,
+    "description": "Pizza topped with tomato sauce and mozzarella cheese",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 34,
+    "name": "French Toast",
+    "price": 8.99,
+    "description": "Slices of bread dipped in beaten eggs and fried until golden brown",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 35,
+    "name": "Vegetable Stir Fry",
+    "price": 10.99,
+    "description": "Mixed vegetables stir-fried in a savory sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 36,
+    "name": "Caprese Salad",
+    "price": 7.99,
+    "description": "Salad made with fresh tomatoes, mozzarella cheese, basil, olive oil, and balsamic vinegar",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 37,
+    "name": "Beef Enchiladas",
+    "price": 12.49,
+    "description": "Tortillas filled with seasoned beef, cheese, and enchilada sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 38,
+    "name": "Chicken Quesadilla",
+    "price": 10.99,
+    "description": "Tortilla filled with grilled chicken, cheese, and vegetables",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 39,
+    "name": "Chocolate Chip Cookies",
+    "price": 6.99,
+    "description": "Homemade cookies with chocolate chips",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 40,
+    "name": "Pulled Pork Sandwich",
+    "price": 11.99,
+    "description": "Sandwich with slow-cooked pulled pork and barbecue sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 41,
+    "name": "Tomato Soup",
+    "price": 6.49,
+    "description": "Soup made with tomatoes, broth, and seasonings",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 42,
+    "name": "Chicken Parmesan",
+    "price": 13.99,
+    "description": "Breaded chicken topped with marinara sauce and melted cheese",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 43,
+    "name": "Mango Smoothie",
+    "price": 5.99,
+    "description": "Smoothie made with mango, yogurt, and orange juice",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 44,
+    "name": "Grilled Cheese Sandwich",
+    "price": 7.49,
+    "description": "Sandwich with melted cheese between slices of grilled bread",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 45,
+    "name": "Chicken Fried Rice",
+    "price": 9.99,
+    "description": "Rice stir-fried with chicken, vegetables, and soy sauce",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 46,
+    "name": "Garden Salad",
+    "price": 6.99,
+    "description": "Salad with mixed greens, vegetables, and dressing",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 47,
+    "name": "Pancakes",
+    "price": 8.49,
+    "description": "Fluffy pancakes served with butter and syrup",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 48,
+    "name": "Beef Kabobs",
+    "price": 14.49,
+    "description": "Skewers of marinated beef and vegetables grilled to perfection",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 49,
+    "name": "Cobb Salad",
+    "price": 11.49,
+    "description": "Salad with lettuce, tomatoes, bacon, avocado, cheese, and hard-boiled eggs",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  {
+    "id": 50,
+    "name": "Margarita Cocktail",
+    "price": 7.99,
+    "description": "Classic cocktail made with tequila, lime juice, and triple sec",
+    "img": "https://via.placeholder.com/800x600"
+  },
+  
     {
-      "id": 1,
-      "name": "Spaghetti Carbonara",
-      "price": 12.99,
-      "description": "Pasta with eggs, cheese, pancetta, and black pepper",
+      "id": 51,
+      "name": "Vegetable Soup",
+      "price": 6.99,
+      "description": "Soup made with a variety of fresh vegetables and herbs",
       "img": "https://via.placeholder.com/800x600"
     },
     {
-      "id": 2,
-      "name": "Chicken Tikka Masala",
-      "price": 14.49,
-      "description": "Grilled chicken in a creamy tomato sauce with Indian spices",
+      "id": 52,
+      "name": "Steak Frites",
+      "price": 18.99,
+      "description": "Grilled steak served with French fries and a side salad",
       "img": "https://via.placeholder.com/800x600"
     },
     {
-      "id": 3,
-      "name": "Sushi",
-      "price": 16.99,
-      "description": "Fish and rice rolls with various fillings like avocado, cucumber, or tuna",
+      "id": 53,
+      "name": "Caramelized Onion Burger",
+      "price": 11.49,
+      "description": "Beef burger topped with caramelized onions and Swiss cheese",
       "img": "https://via.placeholder.com/800x600"
     },
     {
-      "id": 4,
-      "name": "Caesar Salad",
+      "id": 54,
+      "name": "Strawberry Cheesecake",
       "price": 8.99,
-      "description": "Lettuce, croutons, parmesan cheese, and Caesar dressing",
-      "img": "https://via.placeholder.com/800x600"
-    },
-    {
-      "id": 5,
-      "name": "Hamburger",
-      "price": 10.99,
-      "description": "Beef patty with lettuce, tomato, onion, and condiments in a bun",
-      "img": "https://via.placeholder.com/800x600"
-    },
-    {
-      "id": 6,
-      "name": "Pad Thai",
-      "price": 11.99,
-      "description": "Stir-fried rice noodles with tofu, shrimp, peanuts, egg, and bean sprouts",
-      "img": "https://via.placeholder.com/800x600"
-    },
-    {
-      "id": 7,
-      "name": "Margherita Pizza",
-      "price": 9.99,
-      "description": "Pizza topped with tomato sauce, mozzarella cheese, and basil leaves",
-      "img": "https://via.placeholder.com/800x600"
-    },
-    {
-      "id": 8,
-      "name": "Beef Burrito",
-      "price": 10.49,
-      "description": "Tortilla filled with seasoned beef, rice, beans, cheese, and salsa",
-      "img": "https://via.placeholder.com/800x600"
-    },
-    {
-      "id": 9,
-      "name": "Pho",
-      "price": 11.99,
-      "description": "Vietnamese noodle soup with broth, rice noodles, herbs, and meat (usually beef or chicken)",
-      "img": "https://via.placeholder.com/800x600"
-    },
-    {
-      "id": 10,
-      "name": "Tiramisu",
-      "price": 7.99,
-      "description": "Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese",
+      "description": "Creamy cheesecake with a graham cracker crust and fresh strawberries",
       "img": "https://via.placeholder.com/800x600"
     }
-  ]
-  
+]

@@ -95,7 +95,7 @@ body{
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 1200px;
+    /* height: 1200px; */
     margin: 10px;
 }
 .card-container{
@@ -104,7 +104,7 @@ body{
     justify-content: center;
     align-content: center;
     width: 60%;
-    height: 1200px
+    /* height: 1200px */
 }
 .card-parent{
     width: 260px;
