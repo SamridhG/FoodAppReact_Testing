@@ -93,7 +93,10 @@ body{
 }
 .card-container-parent{
     display: flex;
+    flex-direction: column;
+    align-content: center;   
     justify-content: center;
+    align-items: center;
     width: 100vw;
     /* height: 1200px; */
     margin: 10px;
@@ -149,4 +152,48 @@ body{
 }
 .card-parent:hover>.name-and-price,.card-parent:hover>.card-discription{
     color:  #FFA500;
+}
+.shimmer-card-container-parent{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    /* height: 1200px; */
+    margin: 10px;
+}
+.shimmer-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    /* height: 1200px */
+}
+.shimmer-card-parent{
+    width: 260px;
+    height:385px;
+    background-color:  #FFA500;
+    border-radius: 10%;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+.additional-feature{
+    display: flex;
+
+}
+.top-rated{
+    font-size: 30px;
+    padding: 6px;
+}
+.top-rated:hover{
+    background-color: #FFA500;
+    color: #FFFFFF;
+}
+.search-bar{
+ height: 45px;
+ font-size: 35px;
+}
+.search-button{
+    height: 45px;
+    font-size: 20px;
+    padding: 10px;
 }
