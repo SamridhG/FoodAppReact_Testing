@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 const Logo=()=>{
     return(
         <div className="logo-container">
@@ -10,11 +11,11 @@ const NavBar=()=>{
     return (
         <div className="nav-bar">
             <ul className="nav-option">
-                <li>Menu</li>
+                <li><Link to="/">Menu</Link></li>
                 <li>Resturant</li>
                 <li>Service</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
         </div>
     )

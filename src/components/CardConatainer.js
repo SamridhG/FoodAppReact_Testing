@@ -7,7 +7,10 @@ const Card=(details)=>{
     let name=item.info.name
     let rate=item.info.avgRating;
     let discription=item.info.cuisines
-   return ( <div className="card-parent">
+    let onclickCalled=()=>{
+        console.log("Card Clicked",name)
+    }
+   return ( <div className="card-parent" onClick={onclickCalled}>
             <div className="card-img">
             <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${img}`}></img>
             </div>
