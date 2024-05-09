@@ -1,5 +1,6 @@
 import list from '../json/fooditem.json'
 import { useState , useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import Shimmer from './Shimmer'
 const Card=(details)=>{
     const item=details.food
@@ -7,10 +8,7 @@ const Card=(details)=>{
     let name=item.info.name
     let rate=item.info.avgRating;
     let discription=item.info.cuisines
-    let onclickCalled=()=>{
-        console.log("Card Clicked",name)
-    }
-   return ( <div className="card-parent" onClick={onclickCalled}>
+   return ( <div className="card-parent">
             <div className="card-img">
             <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${img}`}></img>
             </div>
@@ -78,7 +76,7 @@ const CardConatainer=(props)=>{
         <div className="card-container">
            {
             filteritem.map((item)=>(
-                <Card key={item.info.id} food={item}/>
+                <Link key={item.info.id} to={'/resturant/'+item.info.id}><Card food={item}/></Link>
             ))
            }
          </div>

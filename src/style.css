@@ -204,3 +204,47 @@ body{
     font-size: 100px;
     color: #FFFFFF;
 }
+.rest-name ,.rest-cusine{
+    font-size: 80px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.rest-cusine{
+    font-size: 30px;
+    padding:10px;
+    margin: 10px;
+}
+.menu-cards{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.menu-card-parent{
+   display: flex;
+   width: 750px;
+   height: 200px;
+   background-color: #FFFFFF;
+   margin: 20px;
+   padding: 20px;
+   border-radius:20px ;
+   justify-content: space-between;
+}
+.menu-card-item-name{
+    font-size: 40px;
+}
+.menu-card-item-rating , .menu-card-item-price{
+   font-size: 20px;
+}
+.menu-card-pic{
+    height: 200px;
+    width: 200px;
+}
+.menu-card-pic>img{
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+       background-size: cover;
+       background-position: center; 
+        box-sizing: border-box;
+}
