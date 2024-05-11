@@ -1,8 +1,26 @@
+import { useEffect } from "react";
+import UserClass from "./UserClass";
 const About=()=>{
+    console.log("About Constructor")
+    useEffect(()=>{
+        console.log("About Use effect")
+    })
    return (
     <div className="error">
-        <h1>About Section</h1>
+        <UserClass name={"Samridh"}/> 
+        <UserClass name={"Khushboo"}/> 
+        {/* {console.log("About Render")}
+        <Testing></Testing>
+        <Testing></Testing> */}
     </div>
    )
 }
-export default About;
+
+const Testing=()=>{
+    console.log("Testing Constructor")
+    useEffect(()=>{
+        console.log("Testing use effect")
+    },[])
+    return (console.log("Return Testing"))
+}
+export default About; 
