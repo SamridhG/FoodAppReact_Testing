@@ -27,7 +27,7 @@ const CardConatainer=(props)=>{
     console.log("Rerender")
     useEffect(()=>{
         fetchData();
-        console.log("Use Effect Called")
+        // console.log("Use Effect Called")
     },[])
    const fetchData=async ()=>{
     try {
