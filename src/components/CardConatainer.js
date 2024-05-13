@@ -2,6 +2,7 @@ import list from '../json/fooditem.json'
 import { useState , useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Shimmer from './Shimmer'
+import useOnlineStatus from '../utility/useOnlineStatus'
 const Card=(details)=>{
     const item=details.food
     let img=item.info.cloudinaryImageId
@@ -24,10 +25,10 @@ const CardConatainer=(props)=>{
     const [listitem,setlistitem]=useState([])
     const [filteritem,setfilteritem]=useState([])
     const [searchval,setsearchval]=useState("")
-    console.log("Rerender")
+    console.log("Card Conatiner Rerender")
     useEffect(()=>{
         fetchData();
-        // console.log("Use Effect Called")
+        // console.log("=======>Use Effect Called")
     },[])
    const fetchData=async ()=>{
     try {
@@ -42,6 +43,8 @@ const CardConatainer=(props)=>{
     }
     
    }
+   const status=useOnlineStatus()
+   if(status==false)return (<Shimmer></Shimmer>)
    if(filteritem.length ==0){
     return <Shimmer/>
    }
@@ -50,7 +53,7 @@ const CardConatainer=(props)=>{
         <div className='additional-feature'>
          <button className='top-rated' onClick={
             ()=>{
-                console.log("Card Conatiner Parent ")
+                // console.log("Card Conatiner Parent ")
                 // const filterOut =()=>{
                    console.log("state",state)
                    state=!state;
