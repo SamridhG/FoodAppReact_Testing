@@ -9,22 +9,41 @@ const Card=(details)=>{
     let name=item.info.name
     let rate=item.info.avgRating;
     let discription=item.info.cuisines
-   return ( <div className="card-parent">
+   return ( <div className="m-4 p-4 bg-pink-50 w-60 rounded-lg hover:bg-pink-400 shadow-lg hover:shadow-lg">
             <div className="card-img">
-            <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${img}`}></img>
+            <img className="rounded-lg h-60" src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${img}`}></img>
             </div>
             <div className="name-and-price">
-                <div className="card-name">{name}</div>
+                <div className="font-bold py-4 text-xl">{name}</div>
                 <div className="card-price">{rate}</div>
             </div>
-            <div className="card-discription">{discription}</div>
+            <div className="card-discription">{discription.join(", ")}</div>
     </div>)
 }
 let state=false;
+
+// Higher Order Component 
+
+const withPromatedLabel=(Card)=>{
+    return (props)=>{
+        return (
+            <div>
+            <label className='absolute bg-black text-white m-2 p-2 rounded-sm'>Best in Town</label>
+            <Card {...props}/>
+            </div>   
+        )
+    } 
+} 
+
+
+
+
+
 const CardConatainer=(props)=>{
     const [listitem,setlistitem]=useState([])
     const [filteritem,setfilteritem]=useState([])
     const [searchval,setsearchval]=useState("")
+    const PermotedCard=withPromatedLabel(Card)
     console.log("Card Conatiner Rerender")
     useEffect(()=>{
         fetchData();
@@ -36,6 +55,7 @@ const CardConatainer=(props)=>{
         const json=await data.json()
         //  console.log("Api Data",json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         let newItem=json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        console.log("list Item",newItem)
         setlistitem(newItem)
         setfilteritem(newItem)
     } catch (error) {
@@ -50,8 +70,19 @@ const CardConatainer=(props)=>{
    }
     return (
         <div className="card-container-parent">    
-        <div className='additional-feature'>
-         <button className='top-rated' onClick={
+        <div className='flex h-16 items-center'>
+         <div className='m-4 p-4'>
+            <input className='border border-solid border-black' type='text' value={searchval} onChange={(e)=>{
+                    setsearchval(e.target.value)
+            }}></input>
+            <button className='px-4 py-2 bg-green-100 m-4 rounded-lg' onClick={()=>{
+                let filter=listitem.filter((item)=>{
+                           return item.info.name.toLowerCase().includes(searchval.toLowerCase())
+                })
+                setfilteritem(filter)
+            }}>search</button>
+            </div> 
+            <button className='px-4 py-2 bg-green-100 m-4 rounded-lg' onClick={
             ()=>{
                 // console.log("Card Conatiner Parent ")
                 // const filterOut =()=>{
@@ -63,23 +94,14 @@ const CardConatainer=(props)=>{
                 })
                  setfilteritem(filter)
         //    }
-         } }>Top Rated Restaurants</button>  
-         <div className='search'>
-            <input className='search-bar' type='text' value={searchval} onChange={(e)=>{
-                    setsearchval(e.target.value)
-            }}></input>
-            <button className='search-button' onClick={()=>{
-                let filter=listitem.filter((item)=>{
-                           return item.info.name.toLowerCase().includes(searchval.toLowerCase())
-                })
-                setfilteritem(filter)
-            }}>search</button>
-            </div>  
+         } }>Top Rated Restaurants</button>   
         </div>
-        <div className="card-container">
+        <div className="flex flex-wrap">
            {
             filteritem.map((item)=>(
-                <Link key={item.info.id} to={'/resturant/'+item.info.id}><Card food={item}/></Link>
+                <Link key={item.info.id} to={'/resturant/'+item.info.id}>
+                 {item.info.avgRating>=4.5?<PermotedCard food={item}/>: <Card food={item}/>}  
+                    </Link>
             ))
            }
          </div>

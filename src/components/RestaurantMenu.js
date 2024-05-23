@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import { URL } from "../constants/constant";
 import Shimmer from "./Shimmer";
 import useRestaurentMenu from "../utility/useRestaurentMenu";
+import RestaurantCategory from "./RestaurantCategory";
 const ResturantMenu=()=>{
     console.log("MENU CARD INVOKED")
     const params=useParams()
@@ -15,16 +16,25 @@ const ResturantMenu=()=>{
     const rest_name=RestaurantMenuData.data.cards[2].card.card.info.name
     const rest_cusine=RestaurantMenuData.data.cards[2].card.card.info.cuisines.join()
     const item_cards=RestaurantMenuData.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards
-    console.log("items",item_cards)
-    return (<div className="home-menu">
-        <div className="rest-name">{rest_name}</div>
-        <div className="rest-cusine">{rest_cusine}</div>
-        <div className="menu-cards">
+    
+    const catogaries=RestaurantMenuData.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((node)=>{
+        if(node.card?.card?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory") return node
+    })
+    console.log("items",catogaries)
+    // const item_cards=catogaries
+   return (<div>
+        <div className="font-bold my-10 text-4xl text-center">{rest_name}</div>
+        <div className="font-bold text-2xl text-center">{rest_cusine}</div>
+        {catogaries.map((catogary)=>(
+              <RestaurantCategory key={catogary?.card?.card.title} data={catogary?.card?.card}/>
+        ))}
+        
+        {/* <div className="menu-cards">
               {  item_cards.map((item)=>(
                  <MenuCards key={item.card.info.id} cardDetail={item.card.info}/>
               ))
             }
-        </div>
+        </div> */}
     </div>)
 } 
 const MenuCards=(props)=>{

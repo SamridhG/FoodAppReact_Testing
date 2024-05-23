@@ -48,7 +48,7 @@ const appRouter=createBrowserRouter([
         { 
             path:'/',
             element:(<>
-               <MenuText/>
+               {/* <MenuText/> */}
             <CardConatainer />
             </>)
         },
