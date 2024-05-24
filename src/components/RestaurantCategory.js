@@ -2,11 +2,16 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory=(props)=>{
-    const [showItems,setshowItems]=useState(false)
+    // const [showItems,setshowItems]=useState(false)
     const accordiandata=props.data
+    let showItems=props.showItems
+    let setToShow=props.setToShow
+    let ToShow=props.ToShow
+    let index=props.index
     const handleClick=()=>{
-       console.log("Clicked")
-         setshowItems(!showItems)
+        console.log("Index Click")
+    let isOpen= ToShow==index?null:index
+    setToShow(isOpen)
     }
     return (
         <div>
@@ -25,5 +30,4 @@ const RestaurantCategory=(props)=>{
         </div>
     )
 }
-
 export default RestaurantCategory; 

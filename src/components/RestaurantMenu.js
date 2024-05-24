@@ -8,6 +8,7 @@ const ResturantMenu=()=>{
     console.log("MENU CARD INVOKED")
     const params=useParams()
     const RestaurantMenuData=useRestaurentMenu(params)
+    const [ToShowAccordian,setToShowAccordian]=useState(null)
     console.log("Menu Data",RestaurantMenuData)
    
     if(RestaurantMenuData==null){
@@ -25,8 +26,8 @@ const ResturantMenu=()=>{
    return (<div>
         <div className="font-bold my-10 text-4xl text-center">{rest_name}</div>
         <div className="font-bold text-2xl text-center">{rest_cusine}</div>
-        {catogaries.map((catogary)=>(
-              <RestaurantCategory key={catogary?.card?.card.title} data={catogary?.card?.card}/>
+        {catogaries.map((catogary,index)=>(
+              <RestaurantCategory key={catogary?.card?.card.title} data={catogary?.card?.card} showItems={ToShowAccordian==index?true:false} setToShow={setToShowAccordian} ToShow={ToShowAccordian} index={index}/>
         ))}
         
         {/* <div className="menu-cards">
