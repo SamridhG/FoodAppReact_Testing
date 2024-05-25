@@ -10,7 +10,7 @@ const ItemList=({items})=>{
     const value=useContext(UserContext)  
     return (<div>
             {items.map((item)=>(
-                <div key={item.card.info.id} className="my-2 p-2 border-b-2">
+                <div key={item.card.info.id} className="relative my-2 p-2 border-b-2">
                      <div className="flex justify-between">
                         <div>
                         <div className="text-lg font-bold">{item.card.info.name}</div>
@@ -21,8 +21,9 @@ const ItemList=({items})=>{
                      <span>{value.loggedIn}</span>
                         </div>
                         <img className="w-3/12 border-r-2" src={URL.MENU_CARD+item.card.info.imageId}></img>
+                       
                      </div>
-                    
+                     <button className="m-2 p-2 absolute bottom-0 right-12 rounded-lg bg-slate-900 text-fuchsia-50">Add+</button>
                 </div>
             ))}
     </div>)
