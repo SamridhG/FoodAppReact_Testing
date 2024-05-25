@@ -3,6 +3,7 @@ import useOnlineStatus from "../utility/useOnlineStatus"
 import { URL } from "../constants/constant"
 import { useContext } from "react"
 import UserContext from "../utility/UserContext"
+import { useSelector } from "react-redux"
 const Logo=()=>{
     return(
         <div className="flex">
@@ -16,14 +17,17 @@ const Logo=()=>{
 const NavBar=()=>{
     const status=useOnlineStatus();
     const value=useContext(UserContext)
-    
+    const cart=useSelector((store)=>{
+        console.log("Store",store)
+        return store.cart.items})
+    // console.log("Cart",cart)
     return (
         <div className="flex items-center">
             <ul className="flex p-4 m-4 text-3xl">
                 <li className="px-4">Online:{status.toString()}</li>
                 <li className="px-4"><Link to="/">Menu</Link></li>
                 <li className="px-4">Resturant</li>
-                <li className="px-4">Service</li>
+                <li className="px-4">Cart - {cart.length}</li>
                 <li className="px-4"><Link to="/about">About</Link></li>
                 <li className="px-4"><Link to="/contact">Contact</Link></li>
                 <li className="px-4"><Link to="/grocery">Grocery</Link></li>

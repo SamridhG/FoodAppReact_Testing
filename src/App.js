@@ -11,6 +11,8 @@ import Error from "./components/Error";
 import ResturantMenu from "./components/RestaurantMenu";
 import UserContext from "./utility/UserContext";
 // import Grocery from "./components/Grocery";
+import { Provider } from "react-redux";
+import appStore from "./utility/appStore";
 const Grocery = lazy(()=>import("./components/Grocery"))
 const AppLayout=()=>{
     const [newContext,setnewContext]=useState("Khushboo ji")
@@ -18,12 +20,14 @@ const AppLayout=()=>{
         setnewContext("Khushboo Gupta")
     },[])
     return (
+        <Provider store={appStore}>
         <UserContext.Provider value={{loggedIn:newContext,setNewContext:setnewContext}}>
         <div className="app">
             <HeaderParent/>
             <Outlet/>
         </div>
         </UserContext.Provider>
+        </Provider>
     )
 }
 // const appRouter=createBrowserRouter([
