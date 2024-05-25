@@ -1,9 +1,11 @@
 import list from '../json/fooditem.json'
-import { useState , useEffect} from 'react'
+import { useState , useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import Shimmer from './Shimmer'
 import useOnlineStatus from '../utility/useOnlineStatus'
+import UserContext from '../utility/UserContext'
 const Card=(details)=>{
+    const value=useContext(UserContext)
     const item=details.food
     let img=item.info.cloudinaryImageId
     let name=item.info.name
@@ -18,6 +20,7 @@ const Card=(details)=>{
                 <div className="card-price">{rate}</div>
             </div>
             <div className="card-discription">{discription.join(", ")}</div>
+            <div className="card-price">{value.loggedIn}</div>
     </div>)
 }
 let state=false;
@@ -43,6 +46,7 @@ const CardConatainer=(props)=>{
     const [listitem,setlistitem]=useState([])
     const [filteritem,setfilteritem]=useState([])
     const [searchval,setsearchval]=useState("")
+    const value=useContext(UserContext)
     const PermotedCard=withPromatedLabel(Card)
     console.log("Card Conatiner Rerender")
     useEffect(()=>{
@@ -95,6 +99,12 @@ const CardConatainer=(props)=>{
                  setfilteritem(filter)
         //    }
          } }>Top Rated Restaurants</button>   
+        </div>
+        <div>
+            <input className="m-4 p-2 rounded-sm border-black"type='text' value={value.loggedIn} onChange={(e)=>{
+                    let x=value.setNewContext(e.target.value)
+                   4             // console.log(value)
+            }}></input>
         </div>
         <div className="flex flex-wrap">
            {

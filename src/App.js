@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import ReactDom from 'react-dom/client'
 import MeghnaFood from '../texture/MeghnaFood.jpg'
 import CardConatainer from "./components/CardConatainer";
@@ -9,17 +9,21 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import ResturantMenu from "./components/RestaurantMenu";
+import UserContext from "./utility/UserContext";
 // import Grocery from "./components/Grocery";
 const Grocery = lazy(()=>import("./components/Grocery"))
 const AppLayout=()=>{
-     console.log("A State");
+    const [newContext,setnewContext]=useState("Khushboo ji")
+    useEffect(()=>{
+        setnewContext("Khushboo Gupta")
+    },[])
     return (
+        <UserContext.Provider value={{loggedIn:newContext,setNewContext:setnewContext}}>
         <div className="app">
-            {console.log("In Class ")}
             <HeaderParent/>
             <Outlet/>
         </div>
-        
+        </UserContext.Provider>
     )
 }
 // const appRouter=createBrowserRouter([

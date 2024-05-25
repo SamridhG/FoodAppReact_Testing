@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../utility/useOnlineStatus"
 import { URL } from "../constants/constant"
+import { useContext } from "react"
+import UserContext from "../utility/UserContext"
 const Logo=()=>{
     return(
         <div className="flex">
@@ -13,8 +15,8 @@ const Logo=()=>{
 }
 const NavBar=()=>{
     const status=useOnlineStatus();
+    const value=useContext(UserContext)
     
-    console.log("Status:",status)
     return (
         <div className="flex items-center">
             <ul className="flex p-4 m-4 text-3xl">
@@ -25,6 +27,7 @@ const NavBar=()=>{
                 <li className="px-4"><Link to="/about">About</Link></li>
                 <li className="px-4"><Link to="/contact">Contact</Link></li>
                 <li className="px-4"><Link to="/grocery">Grocery</Link></li>
+                <li className="px-4">{value.loggedIn}</li>
             </ul>
         </div>
     )
