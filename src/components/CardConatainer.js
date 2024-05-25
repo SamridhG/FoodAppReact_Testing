@@ -48,7 +48,7 @@ const CardConatainer=(props)=>{
     const [searchval,setsearchval]=useState("")
     const value=useContext(UserContext)
     const PermotedCard=withPromatedLabel(Card)
-    console.log("Card Conatiner Rerender")
+    // console.log("Card Conatiner Rerender")
     useEffect(()=>{
         fetchData();
         // console.log("=======>Use Effect Called")
@@ -59,11 +59,11 @@ const CardConatainer=(props)=>{
         const json=await data.json()
         //  console.log("Api Data",json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         let newItem=json?.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-        console.log("list Item",newItem)
+        // console.log("list Item",newItem)
         setlistitem(newItem)
         setfilteritem(newItem)
     } catch (error) {
-        console.log("Something Went Wrong:-",error)
+        // console.log("Something Went Wrong:-",error)
     }
     
    }
@@ -90,7 +90,7 @@ const CardConatainer=(props)=>{
             ()=>{
                 // console.log("Card Conatiner Parent ")
                 // const filterOut =()=>{
-                   console.log("state",state)
+                //    console.log("state",state)
                    state=!state;
                    let val=state?4.3:0;
               let  filter=listitem.filter((newItems)=>{

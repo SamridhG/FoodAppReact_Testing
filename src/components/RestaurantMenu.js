@@ -5,11 +5,11 @@ import Shimmer from "./Shimmer";
 import useRestaurentMenu from "../utility/useRestaurentMenu";
 import RestaurantCategory from "./RestaurantCategory";
 const ResturantMenu=()=>{
-    console.log("MENU CARD INVOKED")
+    // console.log("MENU CARD INVOKED")
     const params=useParams()
     const RestaurantMenuData=useRestaurentMenu(params)
     const [ToShowAccordian,setToShowAccordian]=useState(null)
-    console.log("Menu Data",RestaurantMenuData)
+    // console.log("Menu Data",RestaurantMenuData)
    
     if(RestaurantMenuData==null){
         return <Shimmer/>
@@ -21,7 +21,7 @@ const ResturantMenu=()=>{
     const catogaries=RestaurantMenuData.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((node)=>{
         if(node.card?.card?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory") return node
     })
-    console.log("items",catogaries)
+    // console.log("items",catogaries)
     // const item_cards=catogaries
    return (<div>
         <div className="font-bold my-10 text-4xl text-center">{rest_name}</div>

@@ -7,7 +7,7 @@ const ShimmerCard=()=>{
 const Shimmer=()=>{
     return (<div className="shimmer-card-container-parent">    
     <div className="shimmer-card-container">
-    {console.log("in Comp")}
+    {/* {console.log("in Comp")} */}
             <ShimmerCard/>
             <ShimmerCard/>
             <ShimmerCard/>

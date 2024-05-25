@@ -18,7 +18,7 @@ const NavBar=()=>{
     const status=useOnlineStatus();
     const value=useContext(UserContext)
     const cart=useSelector((store)=>{
-        console.log("Store",store)
+        // console.log("Store",store)
         return store.cart.items})
     // console.log("Cart",cart)
     return (

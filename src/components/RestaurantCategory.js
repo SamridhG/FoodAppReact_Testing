@@ -9,7 +9,7 @@ const RestaurantCategory=(props)=>{
     let ToShow=props.ToShow
     let index=props.index
     const handleClick=()=>{
-        console.log("Index Click")
+        // console.log("Index Click")
     let isOpen= ToShow==index?null:index
     setToShow(isOpen)
     }

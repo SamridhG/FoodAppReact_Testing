@@ -27,7 +27,7 @@ class UserClass extends React.Component{
         }
     }
     componentDidUpdate(prevProps,prevState){
-        console.log("Previos State",prevState,this.props)
+        // console.log("Previos State",prevState,this.props)
     }
     render(){
         const userInfo=this.state.userInfo

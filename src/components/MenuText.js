@@ -4,7 +4,7 @@ const MenuText=(props)=>{
         <div className="menu-title" onClick={
                   ()=>{
                      // onClickEvent
-                    console.log("Hello")
+                    // console.log("Hello")
                   }
         }>
             <div className="title-img"></div>

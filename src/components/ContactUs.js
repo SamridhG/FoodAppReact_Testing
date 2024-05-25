@@ -4,7 +4,7 @@ const ContactUs=()=>{
     console.log("err",error)
     return (
         <div className="error">
-            <h1>{console.log("Hello")}Contact Us</h1>
+            {/* <h1>{console.log("Hello")}Contact Us</h1> */}
         </div>
     )
 }
